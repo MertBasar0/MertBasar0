@@ -6,8 +6,8 @@ By day I build enterprise systems at **Metro İstanbul** (CRM, notification plat
 
 ## 🔧 What I'm building
 
-**[acp-net](https://github.com/MertBasar0/acp-net)** — ACP-compatible agent process runtime, diagnostics, and testing tools for .NET.
-[![NuGet](https://img.shields.io/nuget/vpre/Acp.Net.Process?label=Acp.Net.Process)](https://www.nuget.org/packages/Acp.Net.Process)
+**[acp-net](https://github.com/MertBasar0/acp-net)** — ACP-compatible agent process runtime, diagnostics, and testing tools for .NET. `0.1.0` stable is on NuGet.
+[![NuGet](https://img.shields.io/nuget/v/Acp.Net.Process?label=Acp.Net.Process)](https://www.nuget.org/packages/Acp.Net.Process)
 
 The .NET ACP protocol SDKs model the protocol but leave process launch and platform interop to the consumer. Acp.Net is that layer: process lifecycle, WSL/native runtime bridging, environment shaping, preflight checks, transcript recording, and process-boundary testing with deterministic fake agents. Listed in the official [Agent Client Protocol community libraries](https://agentclientprotocol.com).
 
@@ -15,12 +15,14 @@ The .NET ACP protocol SDKs model the protocol but leave process launch and platf
 
 Contributor to [OpenClaw](https://github.com/openclaw/openclaw) — merged work includes:
 
+- [openclaw#92011](https://github.com/openclaw/openclaw/pull/92011) — agents: mechanical guard stopping fallback models from re-executing already-completed work (P1 incident fix)
 - [openclaw#78086](https://github.com/openclaw/openclaw/pull/78086) — state-aware failover and lane suspension for agents
 - [openclaw#80801](https://github.com/openclaw/openclaw/pull/80801) — auth: force re-login flag, remediation hints, session-scoped fallback skip cache
 - [openclaw#75280](https://github.com/openclaw/openclaw/pull/75280) — durable delivery for main-session messages
+- [openclaw#109541](https://github.com/openclaw/openclaw/pull/109541) — co-authored: sentinel-aware fallback completion delivery (credited for identifying the delivery gap)
 - [agent-client-protocol#1428](https://github.com/agentclientprotocol/agent-client-protocol/pull/1428) — added Acp.Net to the official .NET community libraries
 
-Plus open PRs around model fallback safety, subagent completion delivery, and auth billing cooldowns.
+Plus ongoing issue work around subagent session provenance and delivery semantics.
 
 ## ✍️ Writing
 
